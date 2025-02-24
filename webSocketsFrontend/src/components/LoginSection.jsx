@@ -5,14 +5,11 @@ export default function LoginSection({Setws, SetLoginName, loginName}){
         e.preventDefault();
         const socket = new WebSocket("ws://localhost:8080/hello");
         Setws(socket);
+        //kada offSwitch yra true naudotojas nebegales pakeisti savo vardo
         SetOffSwitch(true);
        
         
     }
-   
-       
-    
-  
     return(
         <>
             <form onSubmit = {connect} className ="login">
