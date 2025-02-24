@@ -23,7 +23,7 @@ export default  function WriteMessageSection(prop){
 
     let [chatList,setChatList] = useState([]);
         const returnChatList = chatList.map((x,index )=>{
-            
+            //renderina visas zinutes chatListe
             return<li key = {index} className={x.type}><strong>{x.object.sender}: </strong>{x.object.text}</li>
       
         })
@@ -32,6 +32,7 @@ export default  function WriteMessageSection(prop){
          setChatList (prev=>[...prev,{object:messageObject, type:type}]);
          
     }
+   //veikia kada gaunama zinute
     useEffect(() =>{
         if(!prop.getWs) return;
         prop.getWs.onmessage=(event)=>{
@@ -39,12 +40,14 @@ export default  function WriteMessageSection(prop){
             console.log(JSON.parse(event.data));
             
         };
+       //cleanup
         return () => {
          prop.getWs.onmessage = null;
             
         };
 
     },[prop.getWs]);
+   //veikia kiekviena karta kada updatinamas chatList
     useEffect(()=>{
         scrollToBottom();
     },[chatList])
