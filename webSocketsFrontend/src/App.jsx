@@ -5,7 +5,9 @@ import Header from './components/Header.jsx'
 import './App.css'
 
 function App() {
+//sukuriam web socketu state
 let [ws, Setws] = useState(null);
+//bus naudojami gauti username
 let [loginName, SetLoginName] = useState("");
   return (
     <>
