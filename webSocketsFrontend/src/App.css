@@ -1,0 +1,91 @@
+*{
+  font-family: inter;
+  margin:0;
+  padding:0;
+}
+body{
+  background-color: rgba(63, 79, 68, 1);
+}
+main{
+ 
+  display:grid;
+  justify-content: center;
+  gap:10px;
+}
+
+.chat{
+  margin-top: 20px;
+  display:flex;
+  flex-direction:column-reverse;
+  background-color: rgba(220, 215, 201, 1);
+  height:500px;
+  width:350px;
+  color:rgb(134, 108, 91);
+  border-radius:10px;
+}
+.chatBar{
+  background-color: rgba(162, 123, 92, 1);
+  display:flex;
+  flex-direction:row;
+  height:10vh;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  border-radius:10px 0px 10px 10px;
+}
+.chatBarSubmit{
+  height:30px;
+ 
+}
+.chatBartextField{
+  height:30px;
+  border:0;
+  border-radius:10px;
+  outline:none;
+  background-color:rgba(220, 215, 201, 1) ;
+}
+.sent, .got {
+  display:inline-block;
+  max-width: 15rem; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color:white;
+  margin-bottom: 10px;;
+}
+
+.sent{
+  text-align:right;
+  margin-left: auto;
+  
+}
+.got{
+  margin-right:auto;
+  
+}
+.chatArea{
+  padding-left: 10px;
+  padding-right:10px;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction:column;
+}
+.header{
+  height:7vh;
+  width:100vw;
+  background-color: rgba(44, 57, 48, 1);
+}
+.loginButton{
+  background-color :rgba(162, 123, 92, 1);
+  border-radius:10px;
+  border:none;
+  width:60px;
+  margin-left:10px;
+}
+.userName{
+  border-radius:10px;
+  
+}
